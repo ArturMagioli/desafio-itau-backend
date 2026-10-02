@@ -9,4 +9,6 @@ public interface TransacaoServiceInterface {
     List<TransacaoDto> obterTransacoes();
 
     void salvar(TransacaoDto transacaoDto);
+
+    void limparTransacoes();
 }

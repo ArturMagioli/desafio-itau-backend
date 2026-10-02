@@ -10,4 +10,6 @@ public interface TransacaoRepositoryInterface {
 
     void salvar(Transacao transacao);
 
+    void limparTransacoes();
+
 }

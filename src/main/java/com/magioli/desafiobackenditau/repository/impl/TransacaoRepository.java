@@ -21,4 +21,9 @@ public class TransacaoRepository implements TransacaoRepositoryInterface {
     public void salvar(Transacao transacao) {
         this.transacoes.add(transacao);
     }
+
+    @Override
+    public void limparTransacoes() {
+        this.transacoes.clear();
+    }
 }

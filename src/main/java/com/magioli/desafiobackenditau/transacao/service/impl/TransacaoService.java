@@ -42,6 +42,11 @@ public class TransacaoService implements TransacaoServiceInterface {
         transacaoRepository.salvar(transacao);
     }
 
+    @Override
+    public void limparTransacoes() {
+        transacaoRepository.limparTransacoes();
+    }
+
     private Transacao converterTransacaoDtoParaEntidade(TransacaoDto transacaoDto) {
         Transacao transacao = new Transacao();
         BeanUtils.copyProperties(transacaoDto, transacao);
