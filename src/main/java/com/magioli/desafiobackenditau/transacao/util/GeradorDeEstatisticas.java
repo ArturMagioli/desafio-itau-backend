@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @Component
 public class GeradorDeEstatisticas {
 
-    private final int segundosRecentes = 600;
+    private final int segundosRecentes = 60;
 
     public EstatisticaDto calcularEstatisticas(List<Transacao> transacoes) {
         List<BigDecimal> valoresRecentes = transacoes.stream()
