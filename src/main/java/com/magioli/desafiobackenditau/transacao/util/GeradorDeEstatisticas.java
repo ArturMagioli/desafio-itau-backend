@@ -2,6 +2,7 @@ package com.magioli.desafiobackenditau.transacao.util;
 
 import com.magioli.desafiobackenditau.dto.EstatisticaDto;
 import com.magioli.desafiobackenditau.entity.Transacao;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -13,7 +14,8 @@ import java.util.stream.Collectors;
 @Component
 public class GeradorDeEstatisticas {
 
-    private final int segundosRecentes = 60;
+    @Value("${transacao.estatisticas.segundos:60}")
+    private int segundosRecentes;
 
     public EstatisticaDto calcularEstatisticas(List<Transacao> transacoes) {
         List<BigDecimal> valoresRecentes = transacoes.stream()
