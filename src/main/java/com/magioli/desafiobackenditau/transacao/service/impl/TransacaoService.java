@@ -8,7 +8,6 @@ import com.magioli.desafiobackenditau.transacao.service.TransacaoServiceInterfac
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
